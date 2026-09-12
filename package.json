@@ -9,8 +9,8 @@
     "lint": "eslint",
     "postinstall": "prisma generate",
     "db:generate": "prisma generate",
-    "db:push": "prisma db push",
-    "db:seed": "prisma db seed"
+    "db:push": "node --env-file=.env.local ./node_modules/prisma/build/index.js db push --skip-generate",
+    "db:seed": "node --env-file=.env.local ./node_modules/tsx/dist/cli.mjs prisma/seed.ts"
   },
   "prisma": {
     "seed": "npx tsx prisma/seed.ts"
