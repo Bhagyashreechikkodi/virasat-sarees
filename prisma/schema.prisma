@@ -4,8 +4,7 @@ generator client {
 }
 
 datasource db {
-  // Local: SQLite file. Production (Vercel): use Turso (SQLite-compatible) or switch provider to postgresql + Neon.
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 

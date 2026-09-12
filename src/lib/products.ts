@@ -154,7 +154,7 @@ export async function getProducts(): Promise<Saree[]> {
     });
     if (rows.length) return applyReviewStats(rows.map(rowToSaree));
   } catch {
-    // Keep the storefront working if SQLite is unavailable.
+    // Keep the storefront working if the database is unavailable.
   }
   return catalogFallback();
 }
